@@ -29,5 +29,4 @@ const dataScores = [
   },
 ];
 
-/* eslint-disable */
-export default  dataScores;
+export default dataScores;
