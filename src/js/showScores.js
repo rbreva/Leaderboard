@@ -1,4 +1,4 @@
-import { dataScores } from './dataScores.js';
+import dataScores from './dataScores.js';
 
 const scoresContainer = document.querySelector('.scores__ul');
 
@@ -12,5 +12,4 @@ const showScores = () => {
   });
 };
 
-/* eslint-disable */
-export { showScores };
+export default showScores;

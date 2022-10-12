@@ -19,12 +19,16 @@ Leaderboard: setup project
 
 No prerequisite required
 
-## Author
 
-### Install
+## Install
 Run the following commands to install dependencies
-npm install
+ - `git clone git@github.com:rbreva/Leaderboard.git`
+ - `cd Leaderboard`
+ - `npm install`
+ - `npm ru start`
 
+
+## Author
 👤 **R Mauricio Mendoza H**
 
 - GitHub: [GitHub](https://github.com/rbreva)

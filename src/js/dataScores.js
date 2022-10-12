@@ -30,4 +30,4 @@ const dataScores = [
 ];
 
 /* eslint-disable */
-export { dataScores };
+export default  dataScores;
