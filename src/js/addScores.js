@@ -1,11 +1,9 @@
-import msgAccion from './msg_accion';
+import msgAccion from './msg_accion.js';
 
 const addScores = async (e) => {
   e.preventDefault();
-
   const user = document.querySelector('.user').value;
   const score = document.querySelector('.score').value;
- 
   if (user === '' || score === '') {
     msgAccion('Missing data');
   } else {
@@ -25,16 +23,12 @@ const addScores = async (e) => {
     } else {
       msgAccion('Error adding score');
     }
-
     document.querySelector('.user').value = '';
     document.querySelector('.score').value = '';
-
-    const json = await response.json();
-    console.log(json);
-
-    //getScores();
+    // const json = await response.json();
+    // console.log(json);
+    // getScores();
   }
-
-}
+};
 
 export default addScores;

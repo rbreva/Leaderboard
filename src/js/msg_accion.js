@@ -6,6 +6,6 @@ const msgAccion = (msg) => {
     msgAccionDiv.classList.remove('showMessage');
     msgAccionDiv.innerHTML = '';
   }, 4000);
-}
+};
 
-export default msgAccion
+export default msgAccion;
