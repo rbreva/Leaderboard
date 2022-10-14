@@ -1,30 +1,30 @@
 const dataScores = [
   {
-    name: 'Name',
+    name: 'Harry',
     score: '100',
   },
   {
-    name: 'Name',
+    name: 'Oliver',
     score: '20',
   },
   {
-    name: 'Name',
+    name: 'Jack',
     score: '50',
   },
   {
-    name: 'Name',
+    name: 'Charlie',
     score: '78',
   },
   {
-    name: 'Name',
+    name: 'Jacob',
     score: '125',
   },
   {
-    name: 'Name',
+    name: 'Thomas',
     score: '77',
   },
   {
-    name: 'Name',
+    name: 'Alfie',
     score: '42',
   },
 ];

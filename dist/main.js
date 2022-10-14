@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _js_showScores_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/showScores.js */ \"./src/js/showScores.js\");\n\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', _js_showScores_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n//# sourceURL=webpack://webpack_base/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _js_showScores_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/showScores.js */ \"./src/js/showScores.js\");\n\r\n\r\n\r\n//import './js/createGame'\r\n\r\ndocument.addEventListener('DOMContentLoaded', _js_showScores_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n//# sourceURL=webpack://webpack_base/./src/index.js?");
 
 /***/ }),
 
@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst dataScores = [\r\n  {\r\n    name: 'Name',\r\n    score: '100',\r\n  },\r\n  {\r\n    name: 'Name',\r\n    score: '20',\r\n  },\r\n  {\r\n    name: 'Name',\r\n    score: '50',\r\n  },\r\n  {\r\n    name: 'Name',\r\n    score: '78',\r\n  },\r\n  {\r\n    name: 'Name',\r\n    score: '125',\r\n  },\r\n  {\r\n    name: 'Name',\r\n    score: '77',\r\n  },\r\n  {\r\n    name: 'Name',\r\n    score: '42',\r\n  },\r\n];\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dataScores);\r\n\n\n//# sourceURL=webpack://webpack_base/./src/js/dataScores.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n//import showScores from \"./showScores\";\r\n\r\nconst dataScores = [];\r\n\r\nconst getDataScores = async (id) => {\r\n  const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores/`\r\n  const response = await fetch(url)\r\n  const scores = await response.json();\r\n\r\n  if (scores.status !== 200)\r\n    throw Error(`Id Game not found`);\r\n\r\n  return scores.result\r\n}\r\n\r\ngetDataScores('zO7qhdWTc0xF07y62lTL')\r\n  .then((scores) => console.log(scores))\r\n  .catch((e) => console.log(`${e}`))\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dataScores);\r\n\n\n//# sourceURL=webpack://webpack_base/./src/js/dataScores.js?");
 
 /***/ }),
 
