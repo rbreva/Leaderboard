@@ -8,12 +8,12 @@ const getScores = async () => {
     scoresContainer.innerHTML = '<li class="scores__li__noscores">No scores yet</li>';
   } else {
     dataScores.forEach((score, index) => {
-      if(index === 0){
-        scoresContainer.innerHTML += `<li class='scores__li first'><div>${index+1}</div> <div>${score.user}</div> <div> ${score.score}</div></li>`;
-      } else if (index === 1){
-        scoresContainer.innerHTML += `<li class='scores__li second'><div>${index+1}</div> <div>${score.user}</div> <div> ${score.score}</div></li>`;
+      if (index === 0) {
+        scoresContainer.innerHTML += `<li class='scores__li first'><div>${index + 1}</div> <div>${score.user}</div> <div> ${score.score}</div></li>`;
+      } else if (index === 1) {
+        scoresContainer.innerHTML += `<li class='scores__li second'><div>${index + 1}</div> <div>${score.user}</div> <div> ${score.score}</div></li>`;
       } else {
-        scoresContainer.innerHTML += `<li class='scores__li'><div>${index+1}</div> <div>${score.user}</div> <div> ${score.score}</div></li>`;
+        scoresContainer.innerHTML += `<li class='scores__li'><div>${index + 1}</div> <div>${score.user}</div> <div> ${score.score}</div></li>`;
       }
     });
   }
