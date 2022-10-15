@@ -13,7 +13,7 @@ Leaderboard: setup project
 
 
 ## Live Demo
-[Live Demo Link - not available yet] 
+[Live Demo Link](https://rbreva.github.io/Leaderboard/dist/)
 
 ### Prerequisites
 
@@ -25,7 +25,7 @@ Run the following commands to install dependencies
  - `git clone git@github.com:rbreva/Leaderboard.git`
  - `cd Leaderboard`
  - `npm install`
- - `npm ru start`
+ - `npm run start`
 
 
 ## Author
