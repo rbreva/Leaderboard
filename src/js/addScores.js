@@ -7,7 +7,7 @@ const addScores = async (e) => {
   if (user === '' || score === '') {
     msgAccion('Missing data');
   } else {
-    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BQBJ1veNR8vZ1UCuYD3v/scores/', {
+    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zO7qhdWTc0xF07y62lTL/scores/', {
       method: 'POST',
       body: JSON.stringify({
         user,
