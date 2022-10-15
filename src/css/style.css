@@ -1,4 +1,5 @@
 /* -------Generales---------- */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;400;700&display=swap');
 
 :root {
   --white: #fff;
@@ -48,7 +49,7 @@ img {
 }
 
 body {
-  background-color: var(--grey200);
+  background: linear-gradient(135deg, #8165a1 0%, #2d1c3d 50%, #9a385e 90%);
   font-size: 1.6rem;
   color: var(--grey900);
   display: flex;
@@ -56,16 +57,18 @@ body {
   height: 100vh;
   align-items: center;
   justify-content: center;
+  border: 4px solid #6a1a41;
+  font-family: 'Lexend Deca', sans-serif;
+  background-repeat: no-repeat;
 }
 
 /* -------- container ----------- */
 
 .container {
   width: 100%;
-  max-width: 80rem;
-  background-color: var(--white);
-  box-shadow: 0 5px 5px 0 var(--grey300);
+  max-width: 90rem;
   padding: 2rem;
+  position: relative;
 }
 
 h1 {
@@ -73,37 +76,105 @@ h1 {
   padding: 2rem;
 }
 
+.trekkingman {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.trekkingman img {
+  height: 18vh;
+}
+
+.leaderboard_logo {
+  width: 100%;
+  text-align: center;
+}
+
+.leaderboard_logo img {
+  width: 12rem;
+  top: 45px;
+  position: relative;
+  z-index: 2;
+}
+
 /* ------- leaderboard ---------- */
 
 .leaderboard {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 3rem;
   padding: 3rem;
 }
 
 .leaderboard__h2 {
-  font-size: 2rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: -1px;
 }
 
 /* ------- Scores ------------- */
 
+.scores {
+  background-color: #e9efd4;
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
 .scores__recents {
-  display: flex;
   padding: 0.5rem;
-  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.scores__btn {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .scores__ul {
-  border: 1px solid var(--grey600);
+  max-height: 27rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scores__ul::-webkit-scrollbar {
+  background-color: #44847b3d;
+  border-radius: 10px;
 }
 
 .scores__li {
-  padding: 0.5rem;
+  background-color: #44847b;
+  padding: 0;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  text-align: center;
+  color: #e9efd4;
+  font-size: 1.5rem;
 }
 
 .scores__li:nth-child(even) {
-  background-color: var(--grey200);
+  background-color: #44847ba6;
+}
+
+.first {
+  width: 95%;
+  font-size: 3rem;
+  border: 9px solid #eca02e;
+}
+
+.second {
+  width: 80%;
+  font-size: 2rem;
 }
 
 .scores__li__noscores {
@@ -114,20 +185,82 @@ h1 {
 /* -------- formscore ----------- */
 
 .formscore {
-  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+  background-color: #e9efd4;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  height: min-content;
+}
+
+.formscore__input {
+  padding: 1rem;
+  text-align: center;
+  background-color: #44847b;
+  border-radius: 0.5rem;
+  border: none;
+  color: #e9efd4;
+  font-size: 1.5rem;
+}
+
+.formscore__input::placeholder {
+  color: inherit;
+}
+
+.formscore__btn {
+  background-color: #361c3a;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #e9efd4;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 /* -------- formscore ----------- */
 
 .msg_accion {
   display: none;
-  border: 1px solid var(--grey500);
+  color: #e9efd4;
+  font-size: 2rem;
+  margin-left: 3rem;
 }
 
 .showMessage {
   display: block;
+}
+
+@media (min-width: 768px) {
+  .trekkingman img {
+    height: 50vh;
+  }
+
+  .leaderboard {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .leaderboard_logo img {
+    width: 24rem;
+    top: 60px;
+  }
+
+  .scores__ul {
+    max-height: 36rem;
+  }
+
+  .scores__li {
+    padding: 1.5rem;
+  }
+
+  .first {
+    font-size: 4rem;
+  }
+
+  .second {
+    font-size: 3rem;
+  }
 }

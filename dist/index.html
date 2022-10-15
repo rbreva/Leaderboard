@@ -6,17 +6,18 @@
     <title>Leaderboard</title>
 <script defer src="main.js"></script></head>
 <body>
+<div class="trekkingman"><img src="images/trekkingman.png"></div>    
 <div class="container">
 
-    <h1>Leaderboard</h1>
+    <div class="leaderboard_logo"><img src="images/leaderboard.svg"></div>
 
     <div class="leaderboard">
 
         <div class="scores">
 
             <div class="scores__recents">
-                <h2 class="leaderboard__h2">Recent scores:</h2>
-                <button type="button" class="scores__btn">Refresh</button>
+                <h2 class="leaderboard__h2">Top scores</h2>
+                <button type="button" class="scores__btn"><img src="images/refresh.svg"></button>
             </div>
             <ul class="scores__ul">
 
@@ -26,10 +27,12 @@
 
         <form class="formscore">
             <h2 class="leaderboard__h2">Add your score</h2>
-            <input class="formscore__input" type="text" placeholder="Your name">
-            <input class="formscore__input" type="number" placeholder="Yout score">
+            <input class="formscore__input user" type="text" placeholder="Your name">
+            <input class="formscore__input score" type="number" placeholder="Your score">
             <button class="formscore__btn" type="submit">Submit</button>
         </form>
+
+        <div class="msg_accion"></div>
 
     </div>
 </div>
